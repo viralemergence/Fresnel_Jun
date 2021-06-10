@@ -230,7 +230,6 @@ if(ModelRun){
 #       str_replace_all(c(".Rmd" = ".R",
 #                         ".rmd" = ".R")))
 
-
 # 0b_Copying across csvs ####
 
 OutputCSVs <- list(
@@ -262,7 +261,8 @@ conflict_prefer("last", "dplyr")
 
 here::here() %>% setwd()
 
-for(i in i:length(Repos)){
+for(i in (i:length(Repos)) %>% 
+    setdiff(which(Repos == "poisot-betacov"))){
   
   j <- 1
   
