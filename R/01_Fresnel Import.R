@@ -150,7 +150,7 @@ Models %>%
 BatModels %<>% mutate(InSample = as.numeric(Sp %in% Virionette$host_species))
 
 BatModels_IS <- BatModels %>% filter(!(!InSample))
-BatModels_OS <- BatModels #%>% filter(!(InSample))
+BatModels_OS <- BatModels %>% filter(!(InSample))
 
 NACols <- BatModels_OS %>% is.na %>% colSums
 
