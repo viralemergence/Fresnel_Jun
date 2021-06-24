@@ -332,9 +332,13 @@ BatModels_OS %>% #filter(Betacov == 0) %>%
 
 # Comparing previous and new predictions ####
 
-BinaryWebsite <- read_csv("BinaryWebsite.csv")
-BinaryPredictions <- read_csv("BinaryPredictions.csv")
-OldPredictions <- read_csv("Cleaned Files/BatModels_OS.csv")
+# BinaryWebsite <- read_csv("BinaryWebsite.csv")
+# BinaryWebsite <- read_csv("BinaryWebsiteNew.csv")
+# BinaryPredictions <- read_csv("BinaryPredictions.csv")
+# OldPredictions <- read_csv("Cleaned Files/BatModels_OS.csv")
+
+BatModels_OS <- read_csv("Cleaned Files/BatModels_OS.csv")
+OldPredictions <- read_csv("Cleaned Files_2020/BatModels_OS.csv")
 
 OldPredictions %>% dplyr::select(Sp, OldPrediction = PropRank) %>% 
   left_join(BatModels_OS %>% dplyr::select(Sp, NewPrediction = PropRank)) %>% 
