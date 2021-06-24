@@ -13,10 +13,6 @@ rm(list = ls())
 
 here::here() %>% setwd()
 
-Virionette <- 
-  read_csv(paste0(here::here(),
-                  "/GitHub/Repos/virionette/03_interaction_data/virionette.csv"))
-
 # Dictating whether to add the most up-to-date betacov predictions ####
 
 AddNewData <- T
@@ -56,6 +52,10 @@ if(AddNewData){
                      '/Github/Repos/virionette/03_interaction_data/virionette.csv'))
   
 }
+
+Virionette <- 
+  read_csv(paste0(here::here(),
+                  "/GitHub/Repos/virionette/03_interaction_data/virionette.csv"))
 
 # BatsVsOther <- read.csv("Data/BatsVsOther.csv") %>%
 #   rename_all(CamelConvert) %>% 
