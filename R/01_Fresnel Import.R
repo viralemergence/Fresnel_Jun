@@ -17,6 +17,46 @@ Virionette <-
   read_csv(paste0(here::here(),
                   "/GitHub/Repos/virionette/03_interaction_data/virionette.csv"))
 
+# Dictating whether to add the most up-to-date betacov predictions ####
+
+AddNewData <- T
+
+if(AddNewData){
+  
+  if(file.exists(paste0(here::here(), 
+                        '/Github/Repos/virionette/03_interaction_data/OldVirionette.csv'))){
+    
+    Virionette <- read_csv(paste0(here::here(), 
+                                  '/Github/Repos/virionette/03_interaction_data/OldVirionette.csv'))
+    
+  }else{
+    
+    Virionette <- read_csv(paste0(here::here(), 
+                                  '/Github/Repos/virionette/03_interaction_data/virionette.csv'))
+    
+    Virionette %>% 
+      write.csv(paste0(here::here(), 
+                       '/Github/Repos/virionette/03_interaction_data/OldVirionette.csv'))
+    
+  }
+  
+  BinaryWebsite <- read_csv("BinaryWebsiteNew.csv")
+  
+  NewData <- 
+    BinaryWebsite %>% filter(`New data` == "New data") %>% 
+    mutate(virus_genus = "Betacoronavirus", host_order = "Chiroptera") %>% 
+    dplyr::select(host_species = Sp, host_order, virus_genus)
+  
+  Virionette %>% 
+    # anti_join(NewData, by = c("host_species", "host_order", "virus_genus")) %>% #nrow
+    bind_rows(NewData) %>% 
+    # nrow
+    mutate_at("host_species", ~str_replace_all(.x, "Myonycteris angolensis", "Lissonycteris angolensis")) %>% 
+    write.csv(paste0(here::here(), 
+                     '/Github/Repos/virionette/03_interaction_data/virionette.csv'))
+  
+}
+
 # BatsVsOther <- read.csv("Data/BatsVsOther.csv") %>%
 #   rename_all(CamelConvert) %>% 
 #   mutate_at("Bats", ~.x %>% as.character %>% CamelConvert)
