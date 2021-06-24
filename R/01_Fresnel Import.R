@@ -78,7 +78,8 @@ stock1 %>% select(Sp = X1, P.Stock1 = Betacoronavirus) %>%
 assoc <- Virionette %>% 
   filter(host_order == 'Chiroptera')
 
-dallas1 %>% as_tibble %>% mutate(InAssocBats = (Sp %in% assoc$host_species)) %>%
+dallas1 %>% as_tibble %>% 
+  mutate(InAssocBats = (Sp %in% assoc$host_species)) %>%
   filter(InAssocBats == 1) -> dallas1
 
 # Drops or not ####
@@ -273,16 +274,16 @@ NonBatModels_OS %<>% select(Sp, Betacov, R.Alb, Rank, PropRank, InSample)
 NonBatModels_OS %<>% arrange(PropRank)
 NonBatModels_IS %<>% arrange(PropRank)
 
+
+dir_create("Cleaned Files")
+
+BatModels_OS %>% write.csv("Cleaned Files/BatModels_OS.csv", row.names = F)
+BatModels_IS %>% write.csv("Cleaned Files/BatModels_IS.csv", row.names = F)
+NonBatModels_OS %>% write.csv("Cleaned Files/NonBatModels_OS.csv", row.names = F)
+NonBatModels_IS %>% write.csv("Cleaned Files/NonBatModels_IS.csv", row.names = F)
+
+
 if(0){
-  
-  # dir_create("Cleaned Files")
-  
-  #BatModels_OS %>% write.csv("Cleaned Files/BatModels_OS.csv", row.names = F)
-  #BatModels_IS %>% write.csv("Cleaned Files/BatModels_IS.csv", row.names = F)
-  #NonBatModels_OS %>% write.csv("Cleaned Files/NonBatModels_OS.csv", row.names = F)
-  #NonBatModels_IS %>% write.csv("Cleaned Files/NonBatModels_IS.csv", row.names = F)
-  
-  
   
   batin %>% gather("Key", "Value", -c(Sp, Betacov, Rank, PropRank, InSample)) %>%
     left_join(
