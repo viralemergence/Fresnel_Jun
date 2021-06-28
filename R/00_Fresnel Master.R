@@ -67,7 +67,7 @@ source("R/00a_Downloading Data Repos.R")
 
 # Dictating whether to add the most up-to-date betacov predictions ####
 
-AddNewData <- T
+AddNewData <- F
 
 if(AddNewData){
   
@@ -88,7 +88,7 @@ if(AddNewData){
     
   }
   
-  BinaryWebsite <- read_csv("BinaryWebsiteNewNew.csv")
+  BinaryWebsite <- read_csv("BinaryWebsiteNew.csv")
   
   NewData <- 
     BinaryWebsite %>% filter(`New data` == "New data") %>% 
