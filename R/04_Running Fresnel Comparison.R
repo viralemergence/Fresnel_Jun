@@ -130,6 +130,8 @@ ModelList <- list(albery, carlson3, dallas1, farrell1,
 # Mutating ####
 
 ModelList %>%
+  map(~.x %>% mutate_at(vars(contains("P.Po")), 
+                             ~.x %>% str_remove("X") %>% as.numeric)) %>% 
   map(~.x %>% 
         mutate_at("Sp", function(a) a %>% 
                     str_trim %>% 
@@ -372,4 +374,5 @@ if(0){
     facet_wrap(~Key)
   
 }
+
 
