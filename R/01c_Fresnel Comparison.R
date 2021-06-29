@@ -1,6 +1,11 @@
 
 # 01b_Fresnel Comparison ####
 
+library(tidyverse); library(fs); library(magrittr); library(ggregplot)
+library(conflicted); library(dplyr)
+library(tidyverse); library(cowplot); library(colorspace); library(patchwork); library(ggpubr); library(ggregplot)
+library(ggtext)
+
 Fresnel2021 <- 
   "Cleaned Files" %>% 
   list.files(full.names = T) %>% 
@@ -158,3 +163,59 @@ Fresnel2020[[1]] %>%
   plot_layout(widths = c(1.35,1)) +
   ggsave("Figures/Obs_Pred_CorrelationsHorizontal.jpeg", 
          units = "mm", width = 325, height = 150)
+
+# Adding different colours for 2020 and 2021 predictions ####
+
+names(Relabel) %<>% paste0(".2020")
+
+FullFresnel[[1]] %>% 
+  #gather("Key", "Value", -c(Sp, Betacov, Rank, PropRank, InSample)) %>%
+  gather("Key", "Value", starts_with("R.")) %>%
+  filter(str_detect(Key, "2020")) %>% 
+  mutate_at("Key", ~.x %>% recode(!!!Relabel) %>% factor(levels = Relabel)) %>%
+  ggplot(aes(Value, Betacov.2021)) + 
+  geom_point(alpha = 0.3, colour = AlberColours[[3]]) + 
+  geom_smooth(method = glm, 
+              method.args = list(family = "binomial"),
+              fill = NA, colour = "black") +
+  #geom_smooth(method = lm, fill = NA, colour = "black") +
+  #geom_smooth(fill = NA, colour = "black") +
+  facet_wrap(~Key, nrow = 2) +
+  stat_cor(label.y = 1.2,
+           aes(label = ..rr.label..)) +
+  #coord_fixed() +
+  scale_x_continuous(breaks = c(0, 0.5, 1.3)) +
+  scale_y_continuous(breaks = c(0:5/5), limits = c(-0, 1.25)) +
+  labs(x = "Proportional rank") -> 
+  
+  SingleCorrelations
+
+FullFresnel[[1]] %>% 
+  mutate(Key = "Multi-model ensemble") %>%
+  ggplot(aes(PropRank.2020, Betacov.2020)) + 
+  #ggtitle("Model assemblage") +
+  geom_point(alpha = 0.6, 
+             aes(colour = as.factor(Betacov.2021),
+                 shape = as.factor(Betacov.2021)),
+             # colour = AlberColours[[3]], 
+             position = position_jitter(h = 0.05)) + 
+  #geom_smooth(method = lm, fill = NA, colour = "black") +
+  geom_smooth(method = glm, 
+              method.args = list(family = "binomial"),
+              fill = NA, colour = "black") +
+  # geom_smooth(fill = NA, colour = "black") +
+  #coord_fixed() + 
+  lims(x = c(0, 1)) +
+  scale_y_continuous(breaks = c(0:5/5), 
+                     limits = c(-0.1, 1.25)) +
+  stat_cor(label.y = 1.2, method = "spearman",
+           aes(label = ..rr.label..)) +
+  facet_wrap(~Key) +
+  scale_colour_manual(values = c(AlberColours[[1]], AlberColours[[3]])) +
+  labs(x = "Proportional rank", colour = "Betacov", shape = "Betacov") ->
+  
+  OverallCorrelations
+
+(OverallCorrelations) + 
+  ggsave("Figures/Obs_Pred_CorrelationsColoured.jpeg", 
+         units = "mm", width = 200, height = 200)
