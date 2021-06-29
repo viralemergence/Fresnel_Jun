@@ -265,7 +265,7 @@ Models %>%
 NonBatModels %<>% mutate(InSample = as.numeric(Sp %in% Virionette$host_species))
 
 NonBatModels_IS <- NonBatModels %>% filter(!(!InSample))
-NonBatModels_OS <- NonBatModels #%>% filter(!(InSample))
+NonBatModels_OS <- NonBatModels %>% filter(!(InSample))
 
 NACols <- NonBatModels_OS %>% is.na %>% colSums
 
@@ -551,7 +551,7 @@ Models %>%
 NonBatModels %<>% mutate(InSample = as.numeric(Sp %in% Virionette$host_species))
 
 NonBatModels_IS <- NonBatModels %>% filter(!(!InSample))
-NonBatModels_OS <- NonBatModels #%>% filter(!(InSample))
+NonBatModels_OS <- NonBatModels %>% filter(!(InSample))
 
 NACols <- NonBatModels_OS %>% is.na %>% colSums
 
