@@ -150,7 +150,7 @@ BatModels_IS %>%
     mutate_at("Value", ~.x*1) %>%
     mutate_at("Key", ~factor(.x, levels = ModelLimits)) %>%
     mutate_at("Key", ~.x %>% recode(!!!Relabel)) %>%
-    filter(!is.na(Value)) -> 
+    filter(!is.na(Value), !is.na(Key)) -> 
     LongBatModels_IS
   
   LongBatModels_IS %<>% 
@@ -168,7 +168,8 @@ BatModels_IS %>%
     theme(axis.title.y = element_text(vjust = -5)) +
     scale_x_continuous(breaks = 1:length(ModelLimits), 
                        labels = ModelLimits) +
-    scale_y_reverse() +
+    # scale_y_reverse() +
+    coord_cartesian(ylim = c(1, 0)) +
     scale_colour_discrete_sequential(palette = AlberPalettes[[3]], rev = F, nmax = 12, 
                                      labels = levels(TopPredictions_IS$Sp)) +    
     theme(legend.text = element_markdown()) +
@@ -343,4 +344,5 @@ OldPredictions <- read_csv("Cleaned Files_2020/BatModels_OS.csv")
 OldPredictions %>% dplyr::select(Sp, OldPrediction = PropRank) %>% 
   left_join(BatModels_OS %>% dplyr::select(Sp, NewPrediction = PropRank)) %>% 
   ggplot(aes(OldPrediction, NewPrediction)) + geom_point() + 
-  geom_smooth(method = lm)
+  geom_smooth(method = lm) + 
+  ggpubr::stat_cor()
