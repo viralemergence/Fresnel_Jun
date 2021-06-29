@@ -25,6 +25,13 @@ names(FullFresnel) <- c("Bats_In", "Bats_Out", "Mammals_In", "Mammals_Out")
 FullFresnel$Bats_In$Betacov.2021 %>% sum(na.rm = T)
 FullFresnel$Bats_In$Betacov.2020 %>% sum(na.rm = T)
 
+dir_create("Full Comparison")
+
+names(FullFresnel) %>% map(~write.csv(FullFresnel[[.x]], 
+                                      row.names = F, 
+                                      file = paste0("Full Comparison/", ., ".csv")))
+
+
 # Correlation figures ####
 
 library(tidyverse); library(cowplot); library(colorspace); library(patchwork); library(ggpubr); library(ggregplot)
