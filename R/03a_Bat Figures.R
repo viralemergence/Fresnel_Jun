@@ -268,11 +268,14 @@ BatModels_IS %>%
   
 }
 
-((TilePlot_IS + ggtitle("In-sample")|
-    TilePlot_OS + ggtitle("Out-of-sample")) +
+((TilePlot_IS + coord_fixed() + ggtitle("In-sample")|
+    TilePlot_OS + coord_fixed() + ggtitle("Out-of-sample")) +
     
-    plot_layout(guides = "collect"))/
-  
+    plot_layout(guides = "collect")) +
+  plot_annotation(tag_levels = "A") +
+  ggsave("Figures/TilePlots.jpeg", units = "mm", 
+         height = 120, width = 200)
+
   (BumpPlot_IS + 
      theme(legend.position = "bottom") +
      guides(colour = guide_legend(direction = "vertical",
@@ -289,7 +292,8 @@ BatModels_IS %>%
   
   # plot_layout(heights = c(1, 1)) +
   plot_annotation(tag_levels = "A") +
-  ggsave("Figures/In_Out_ModelAgreement.jpeg", units = "mm", height = 250, width = 200)
+  ggsave("Figures/BumpPlots.jpeg", units = "mm", 
+         height = 180, width = 200)
 
 
 # Auxiliary plots ####
