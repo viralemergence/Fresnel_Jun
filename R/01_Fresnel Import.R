@@ -138,17 +138,18 @@ Models %<>%
                              na.rm = TRUE)) %>% 
   arrange(Rank)
 
+Models %<>% mutate(InSample = as.numeric(Sp %in% Virionette$host_species))
+
 Models %>% 
   mutate_at("Sp", ~str_replace_all(.x, "Lissonycteris angolensis", 
                                    "Myonycteris angolensis")) %>%
   select(Sp, Betacov, starts_with("R."), starts_with("P."), 
+         InSample,
          Rank, PropRank) %>%
   as.data.frame -> 
   BatModels
 
 # Splitting in-sample 
-
-BatModels %<>% mutate(InSample = as.numeric(Sp %in% Virionette$host_species))
 
 BatModels_IS <- BatModels %>% filter(!(!InSample))
 BatModels_OS <- BatModels %>% filter(!(InSample))

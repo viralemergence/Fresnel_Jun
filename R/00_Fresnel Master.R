@@ -300,7 +300,9 @@ if(AddNewData){
     # anti_join(NewData, by = c("host_species", "host_order", "virus_genus")) %>% #nrow
     bind_rows(NewData) %>% 
     # nrow
-    mutate_at("host_species", ~str_replace_all(.x, "Myonycteris angolensis", "Lissonycteris angolensis")) %>% 
+    mutate_at("host_species", 
+              ~str_replace_all(.x, "Myonycteris angolensis", 
+                               "Lissonycteris angolensis")) %>% 
     write.csv(paste0(here::here(),
                      '/Github/Repos/virionette/03_interaction_data/virionette.csv'), 
               row.names = F)
