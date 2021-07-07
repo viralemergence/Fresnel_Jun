@@ -33,14 +33,17 @@ auc(data.frame(BatModels2[,c('n','Betacov',"PropRank")]), na.rm = TRUE)
 
 ####### 
 
-tvalues <- optimal.thresholds(data.frame(BatModels2[,c('n','Betacov',RNames,PNames,'PropRank')]),
-                              threshold = 10001,
-                              opt.methods = 10,
-                              req.sens = 0.9,
-                              na.rm = TRUE)
+tvalues <- sapply(c(RNames,PNames,'PropRank'), function(x){
+  o <- optimal.thresholds(data.frame(BatModels2[,c('n','Betacov',x)]),
+                          threshold = 10001,
+                          opt.methods = 10,
+                          req.sens = 0.9,
+                          na.rm = TRUE)
+  return(o[,2])
+})
 
-for (name in RNames) {BatModels2[,name] <- as.vector(BatModels2[,name] > tvalues[1,name])}
-for (name in PNames) {BatModels2[,name] <- as.vector(BatModels2[,name] > tvalues[1,name])}
+for (name in RNames) {BatModels2[,name] <- as.vector(BatModels2[,name] > tvalues[name])}
+for (name in PNames) {BatModels2[,name] <- as.vector(BatModels2[,name] > tvalues[name])}
 
 colSums(BatModels2[BatModels2$Betacov==0,RNames], na.rm = TRUE)
 colSums(BatModels2[BatModels2$Betacov==0,PNames], na.rm = TRUE)
