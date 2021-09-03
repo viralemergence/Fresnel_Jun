@@ -291,7 +291,7 @@ f4A=ggplot(bats,aes(PropRank_V1,PropRank_V2))+
                   nudge_x=0.15,
                   force=2,
                   size=3,
-                  nudge_y=0.025,
+                  nudge_y=-0.02,
                   segment.colour=cs[5],
                   segment.alpha=0.5,
                   fontface="italic")+
@@ -304,7 +304,7 @@ f4A=ggplot(bats,aes(PropRank_V1,PropRank_V2))+
                   nudge_x=-0.37,
                   force=2,
                   size=3,
-                  nudge_y=0.35,
+                  nudge_y=0.33,
                   segment.colour=cs[4],
                   segment.alpha=0.5,
                   fontface="italic")+
@@ -334,7 +334,7 @@ f4C=ggplot(bats,aes(PropRank_V1,PropRank_V3))+
   geom_vline(xintercept=1-0.5286,linetype=2,size=0.25,alpha=0.5)+
   
   ## add ensemble 2* threshold
-  geom_hline(yintercept=1-0.4849,linetype=2,size=0.25,alpha=0.5)+
+  geom_hline(yintercept=1-0.4886,linetype=2,size=0.25,alpha=0.5)+
   
   ## add smooth
   geom_line(stat="smooth",method="lm",
@@ -370,7 +370,7 @@ f4C=ggplot(bats,aes(PropRank_V1,PropRank_V3))+
                   nudge_x=0.25,
                   force=2,
                   size=3,
-                  nudge_y=0.025,
+                  nudge_y=0.035,
                   segment.colour=cs[5],
                   segment.alpha=0.5,
                   fontface="italic")+
@@ -383,7 +383,7 @@ f4C=ggplot(bats,aes(PropRank_V1,PropRank_V3))+
                   nudge_x=-0.1,
                   force=2,
                   size=3,
-                  nudge_y=0.33,
+                  nudge_y=0.4,
                   segment.colour=cs[4],
                   segment.alpha=0.5,
                   fontface="italic")+
@@ -484,7 +484,18 @@ f4D=ggplot(set2,aes(InSample_V3,idy))+
 setwd("~/Desktop/Fresnel_Jun/Figures")
 png("Figure 4.png",width=10,height=8,units="in",res=300)
 ggarrange(f4A,f4C,f4B,f4D,common.legend = T,
-          labels=c("(A)","(C)","(B)","(D)"),
+          labels=c("(A)","(B)","(C)","(D)"),
+          font.label=list(size=11.5,face="plain"),
+          heights=c(1,0.65),
+          label.x=-0.01,
+          label.y=0.98)
+dev.off()
+
+## as PDF
+setwd("~/Desktop/Fresnel_Jun/Figures")
+pdf("Figure 4.pdf",width=10,height=8)
+ggarrange(f4A,f4C,f4B,f4D,common.legend = T,
+          labels=c("(A)","(B)","(C)","(D)"),
           font.label=list(size=11.5,face="plain"),
           heights=c(1,0.65),
           label.x=-0.01,
