@@ -159,5 +159,11 @@ png("Figures/Figure 5_phylo.png",width=4,height=4,units="in",res=300)
 final
 dev.off()
 
+## export pdf
+setwd("~/Desktop/Fresnel_Jun")
+pdf("Figures/Figure 5_phylo.pdf",width=4,height=4)
+final
+dev.off()
+
 ## export table
 write.csv(temp_results, 'final ensemble phylofactor results.csv')
