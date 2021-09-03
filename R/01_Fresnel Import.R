@@ -64,11 +64,11 @@ farrell1 %>% select(Host, p.interaction) %>% rename(Sp = Host, P.Far1 = p.intera
 farrell2 %>% select(Host, p.interaction) %>% rename(Sp = Host, P.Far2 = p.interaction) -> farrell2
 guth1 %>% select(host_species, pred_med) %>% rename(Sp = host_species, P.Gut1 = pred_med) -> guth1
 guth2 %>% select(host_species, pred_med) %>% rename(Sp = host_species, P.Gut2 = pred_med) -> guth2
-poisot1 %>% rename(Sp = X1, P.Po1 = X2) -> poisot1
-poisot2 %>% rename(Sp = X1, P.Po2 = X2) -> poisot2
-poisot3 %>% rename(Sp = X1, P.Po3 = X2) -> poisot3
+poisot1 %>% rename(Sp = 1, P.Po1 = 2) -> poisot1
+poisot2 %>% rename(Sp = 1, P.Po2 = 2) -> poisot2
+poisot3 %>% rename(Sp = 1, P.Po3 = 2) -> poisot3
 
-stock1 %>% select(Sp = X1, P.Stock1 = Betacoronavirus) %>% 
+stock1 %>% select(Sp = 1, P.Stock1 = Betacoronavirus) %>% 
   arrange(desc(P.Stock1)) ->
   
   StockDF

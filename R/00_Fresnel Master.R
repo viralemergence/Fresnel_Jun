@@ -406,13 +406,13 @@ OutputCSVs <- list(
   
   c(glue("Guth{c('Citations', 'Uncorrected')}.csv")),
   
-  c(glue("predictions/Poisot{c(rep('Knn', 4), rep('Lf', 2))}{c(1,1,2,2,'','')}{rep(c('Bat','Mammal'), 3)}.csv")),
+  c(glue("predictions/Poisot{c(rep('Knn', 4), rep('Lf', 2))}{c(1,1,2,2,'','')}{rep(c('Bat','Mammal'), 3)}-June.csv")),
   
   c(glue("05_results/Stock_both{c('', '_nocites')}.csv"))
   
 )
 
-names(OutputCSVs) <- Repos
+names(OutputCSVs) <- Repos %>% setdiff("becker-betacov")
 
 i <- 1
 j <- 1
@@ -421,8 +421,9 @@ conflict_prefer("last", "dplyr")
 
 here::here() %>% setwd()
 
-for(i in (i:length(Repos)) %>% 
-    setdiff(which(Repos == "poisot-betacov"))){
+dir_create("Github/CSVs")
+
+for(i in (i:length(Repos))){
   
   j <- 1
   
