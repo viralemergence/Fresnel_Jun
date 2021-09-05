@@ -17,7 +17,7 @@ Eptesicus serotinus,Reported,Reported,True +,True +,True +,True +,True +,True +,
 Myotis daubentonii,Reported,Reported,True +,True +,True +,True +,False -,True +,True +,True +,True +,
 Pipistrellus abramus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Rhinolophus pusillus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Chaerephon pumilus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
+Chaerephon pumilus,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Rhinolophus affinis,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Scotophilus kuhlii,Reported,New data,True +,False -,False -,True +,True +,True +,True +,True +,True +,https://www.biorxiv.org/content/10.1101/2020.05.31.116061v1
 Pteropus lylei,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://virologyj.biomedcentral.com/articles/10.1186/s12985-018-0950-6
@@ -31,13 +31,13 @@ Taphozous perforatus,Reported,Reported,True +,True +,True +,True +,True +,True +
 Artibeus lituratus,Reported,Reported,True +,True +,False -,False -,True +,True +,True +,True +,True +,
 Murina leucogaster,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Hipposideros caffer,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Nycteris gambiensis,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Rhinolophus stheno,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
+Nycteris gambiensis,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://journals.plos.org/plospathogens/article/authors?id=10.1371/journal.ppat.1008758
+Rhinolophus stheno,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://www.biorxiv.org/content/10.1101/2021.03.08.434390v1?rss=1
 Rhinolophus thomasi,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Rhinolophus shameli,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
+Rhinolophus shameli,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://www.biorxiv.org/content/10.1101/2021.01.26.428212v1
 Myotis ricketti,Reported,Reported,True +,True +,True +,NA,True +,True +,True +,True +,True +,
-Myonycteris torquata,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,False -,True +,
-Rhinolophus malayanus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Myonycteris torquata,Reported,New data,True +,True +,True +,True +,True +,NA,True +,False -,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
+Rhinolophus malayanus,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://www.biorxiv.org/content/10.1101/2021.03.08.434390v1?rss=1
 Cynopterus horsfieldii,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
 Rhinolophus clivosus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Megaerops niphanae,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
@@ -46,10 +46,10 @@ Pipistrellus nathusii,Reported,Reported,True +,True +,True +,True +,True +,True 
 Macroglossus minimus,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,http://philjournalsci.dost.gov.ph/96-next-issue/vol-149-no-1-march-2020/1160-first-molecular-evidence-for-bat-betacoronavirus-in-mindanao
 Rhinolophus mehelyi,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
 Rhinolophus hipposideros,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Rhinolophus acuminatus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Megaerops ecaudatus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Pteropus conspicillatus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Nycteris thebaica,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
+Rhinolophus acuminatus,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://www.nature.com/articles/s41467-021-21240-1
+Megaerops ecaudatus,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
+Pteropus conspicillatus,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
+Nycteris thebaica,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://www.nature.com/articles/s41598-020-63799-7
 Pipistrellus kuhlii,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Desmodus rotundus,Reported,New data,True +,True +,False -,False -,True +,True +,True +,True +,True +,https://www.scielo.br/scielo.php?script=sci_arttext&pid=S1413-86702008000600003
 Dyacopterus spadiceus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
@@ -57,11 +57,11 @@ Rhinolophus pearsonii,Reported,Reported,True +,True +,True +,True +,True +,NA,Tr
 Pipistrellus coromandra,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://www.sciencedirect.com/science/article/abs/pii/S1567134816305135
 Nanonycteris veldkampii,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://www.mdpi.com/1999-4915/12/8/855
 Epomophorus labiatus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Vespertilio murinus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
+Vespertilio murinus,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0252534
 Scotophilus dinganii,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Carollia perspicillata,Reported,Reported,True +,False -,False -,False -,False -,True +,True +,True +,True +,
 Nyctalus noctula,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
-Epomops buettikoferi,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Epomops buettikoferi,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Neoromicia capensis,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Rhinolophus euryale,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Rhinolophus blasii,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,False -,True +,
@@ -74,7 +74,7 @@ Megaloglossus woermanni,Reported,Reported,True +,True +,True +,True +,True +,Tru
 Tadarida teniotis,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://link.springer.com/content/pdf/10.1007/s11262-018-1614-8.pdf
 Scotophilus leucogaster,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Scotophilus heathii,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://virologyj.biomedcentral.com/articles/10.1186/s12985-015-0289-1
-Pipistrellus tenuis,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Pipistrellus tenuis,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://journals.asm.org/doi/10.1128/JVI.00116-18?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed
 Myotis dasycneme,Reported,Reported,True +,True +,True +,True +,False -,True +,True +,True +,True +,
 Barbastella barbastellus,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Hypsugo savii,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
@@ -91,7 +91,7 @@ Mops condylurus,Reported,Reported,True +,True +,True +,True +,True +,True +,True
 Vespertilio sinensis,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Chaerephon plicatus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Pipistrellus pygmaeus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Miniopterus magnater,Reported,Reported,True +,True +,True +,True +,False -,True +,True +,True +,True +,
+Miniopterus magnater,Reported,New data,True +,True +,True +,True +,False -,True +,True +,True +,True +,https://www.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.82203-0#tab2
 Hipposideros bicolor,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Myotis nattereri,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Tylonycteris pachypus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
@@ -103,24 +103,24 @@ Hipposideros gigas,Reported,New data,True +,True +,True +,True +,True +,True +,T
 Triaenops persicus,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,True +,True +,
 Hipposideros lekaguli,Reported,New data,True +,True +,True +,True +,True +,True +,True +,True +,True +,https://www.sciencedirect.com/science/article/abs/pii/S1567134816305135
 Sturnira lilium,Unreported,Unreported,Suspected,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Suspected,Suspected,Suspected,
-Neoromicia somalicus,Reported,Reported,True +,True +,True +,NA,True +,NA,True +,True +,True +,
+Neoromicia somalicus,Reported,New data,True +,True +,True +,NA,True +,NA,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Pteronotus davyi,Reported,Reported,True +,False -,False -,False -,True +,True +,True +,True +,True +,
-Rousettus madagascariensis,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Rousettus madagascariensis,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://www.nature.com/articles/s41598-020-63799-7
 Pipistrellus deserti,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://wwwnc.cdc.gov/eid/article/22/1/15-1397_article
 Pteropus hypomelanus,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,
-Hypsugo pulveratus,Reported,Reported,True +,True +,True +,NA,True +,NA,True +,True +,True +,
+Hypsugo pulveratus,Reported,New data,True +,True +,True +,NA,True +,NA,True +,True +,True +,"GenBank: MN312842, MN312848, MN312849, MN312852, MN312853, MN312854"
 Artibeus phaeotis,Reported,Reported,True +,False -,False -,False -,False -,True +,True +,True +,True +,
 Ia io,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,False -,
 Molossus rufus,Unreported,Unreported,Suspected,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Suspected,Suspected,Suspected,
-Myotis punicus,Reported,Reported,True +,True +,True +,True +,False -,True +,True +,True +,True +,
+Myotis punicus,Reported,New data,True +,True +,True +,True +,False -,True +,True +,True +,True +,GenBank: MN823619
 Eptesicus nilssonii,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,False -,
 Rhinolophus creaghi,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
-Glauconycteris variegata,Reported,Reported,True +,True +,True +,True +,False -,NA,True +,True +,True +,
+Glauconycteris variegata,Reported,New data,True +,True +,True +,True +,False -,NA,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Myotis nigricans,Unreported,Unreported,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Nycteris macrotis,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,False -,https://www.mdpi.com/1999-4915/12/8/855
 Megaerops kusnotoi,Reported,New data,True +,False -,True +,True +,True +,NA,True +,True +,True +,
 Eptesicus fuscus,Unreported,Unreported,Suspected,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
-Acerodon celebensis,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Acerodon celebensis,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Eidolon dupreanum,Reported,Reported,True +,True +,True +,True +,True +,True +,True +,False -,True +,
 Hypsignathus monstrosus,Unreported,Unreported,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,
 Glossophaga soricina,Unreported,Unreported,Suspected,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Suspected,Suspected,Suspected,
@@ -128,17 +128,17 @@ Rhinolophus eloquens,Unreported,Unreported,Suspected,Suspected,Unlikely,Suspecte
 Hipposideros commersoni,Reported,Reported,True +,True +,True +,False -,True +,NA,True +,True +,False -,
 Rhinolophus cornutus,Reported,Reported,True +,True +,True +,NA,True +,NA,True +,True +,False -,
 Myotis mystacinus,Unreported,Unreported,Suspected,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
-Hipposideros cervinus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,False -,
+Hipposideros cervinus,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,False -,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Myotis lucifugus,Unreported,Unreported,Suspected,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
-Rhinolophus rufus,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,True +,
+Rhinolophus rufus,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,True +,https://link.springer.com/article/10.1007/s00705-012-1410-z
 Molossus molossus,Unreported,Unreported,Suspected,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Myotis pequinius,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,False -,https://www.biorxiv.org/content/10.1101/2020.05.31.116061v1
-Emballonura alecto,Reported,Reported,True +,True +,True +,True +,True +,NA,True +,True +,False -,
+Emballonura alecto,Reported,New data,True +,True +,True +,True +,True +,NA,True +,True +,False -,https://link.springer.com/article/10.1007/s00705-012-1410-z
 Rhinolophus coelophyllus,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Suspected,Suspected,Unlikely,Unlikely,Suspected,
 Phyllostomus hastatus,Unreported,Unreported,Unlikely,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Suspected,Suspected,Suspected,
 Tadarida brasiliensis,Unreported,Unreported,Unlikely,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Uroderma bilobatum,Unreported,Unreported,Unlikely,Suspected,Unlikely,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Suspected,
-Hipposideros fuliginosus,Reported,Reported,False -,True +,True +,True +,True +,NA,True +,True +,False -,
+Hipposideros fuliginosus,Reported,New data,False -,True +,True +,True +,True +,NA,True +,True +,False -,"USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021"
 Pteropus rufus,Reported,Reported,False -,True +,True +,True +,True +,True +,True +,False -,True +,
 Myotis septentrionalis,Unreported,Unreported,Unlikely,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
 Epomophorus wahlbergi,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
@@ -146,7 +146,7 @@ Carollia brevicauda,Unreported,Unreported,Unlikely,Suspected,Unlikely,Unlikely,U
 Rhinolophus monoceros,Reported,Reported,False -,False -,True +,NA,True +,NA,True +,True +,True +,
 Epomops dobsonii,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Suspected,Suspected,Unlikely,Suspected,Suspected,
 Rhinolophus rouxii,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Suspected,Suspected,Unlikely,Unlikely,Suspected,
-Neoromicia zuluensis,Reported,Reported,False -,False -,True +,True +,True +,NA,True +,True +,True +,
+Neoromicia zuluensis,Reported,New data,False -,False -,True +,True +,True +,NA,True +,True +,True +,https://wwwnc.cdc.gov/eid/article/19/10/13-0946_article
 Rhinolophus hildebrandtii,Unreported,Unreported,Unlikely,Suspected,Unlikely,Suspected,Suspected,NA,Unlikely,Unlikely,Suspected,
 Rhinolophus simulator,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Suspected,Suspected,Unlikely,Unlikely,Suspected,
 Pipistrellus subflavus,Unreported,Unreported,Unlikely,Unlikely,Unlikely,Suspected,Unlikely,Suspected,Unlikely,Suspected,Suspected,
@@ -165,7 +165,7 @@ Hipposideros cineraceus,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspe
 Nyctalus lasiopterus,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,
 Nyctalus plancyi,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,
 Myotis brandtii,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,
-Pteronotus personatus,Reported,Reported,False -,True +,False -,False -,True +,NA,True +,True +,False -,
+Pteronotus personatus,Reported,New data,False -,True +,False -,False -,True +,NA,True +,True +,False -,https://journals.plos.org/plospathogens/article/authors?id=10.1371/journal.ppat.1008758
 Tylonycteris robustula,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Unlikely,
 Saccolaimus saccolaimus,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Suspected,Unlikely,
 Myotis capaccinii,Unreported,Unreported,Unlikely,Suspected,Suspected,Suspected,Unlikely,Suspected,Unlikely,Unlikely,Suspected,

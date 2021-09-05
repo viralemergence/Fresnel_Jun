@@ -1,4 +1,21 @@
 
+
+####### RUN THIS TO SKIP IMPORT STEP
+
+# # Importing predictions and creating ranked predictions ####
+# 
+# library(tidyverse); library(fs); library(magrittr); library(ggregplot)
+# library(conflicted); library(dplyr)
+# 
+# conflict_prefer("map", "purrr")
+# 
+# c("select", "filter", "intersect", "summarise", "mutate", "rename", "arrange") %>%
+#   map(~conflict_prefer(.x, "dplyr"))
+# 
+# rm(list = ls())
+# 
+# here::here() %>% setwd()
+
 # Thresholding Model Predictions ####
 
 library(PresenceAbsence); library(tidyverse)
@@ -78,29 +95,54 @@ BatModels2 %>% write_csv("BinaryPredictions.csv")
 
 # WHO WON! WHO'S NEXT!
 
-verify <- c('Artibeus jamaicensis',
+verify <- c('Acerodon celebensis',
+            'Artibeus jamaicensis',
             'Carollia sowelli',
+            'Chaerephon pumilus', 
             'Desmodus rotundus',
+            'Epomops buettikoferi',
+            'Emballonura alecto',
+            'Glauconycteris variegata', 
+            'Hipposideros cervinus',
+            'Hipposideros fuliginosus', 
             'Hipposideros gigas',
             'Hipposideros larvatus', 
             'Hipposideros lekaguli',
             'Hipposideros pomona', 
+            'Hypsugo pulveratus',
             'Macroglossus minimus',
+            'Megaerops ecaudatus',
             'Megaerops kusnotoi',
+            'Miniopterus magnater',
             'Myonycteris angolensis',
+            'Myonycteris torquata', 
             'Myotis horsfieldii',
             'Myotis pequinius', 
+            'Myotis punicus',
             'Nanonycteris veldkampii',
+            'Neoromicia somalicus',
+            'Neoromicia zuluensis',
+            'Nycteris gambiensis',
             'Nycteris macrotis',
+            'Nycteris thebaica',
             'Pipistrellus coromandra',
             'Pipistrellus deserti',
+            'Pipistrellus tenuis',
             'Plecotus auritus',
+            'Pteronotus personatus',
+            'Pteropus conspicillatus',
             'Pteropus lylei', 
+            'Rhinolophus acuminatus',
+            'Rhinolophus malayanus',
+            'Rhinolophus rufus',
+            'Rhinolophus shameli',
+            'Rhinolophus stheno',
+            'Rousettus madagascariensis',
             'Scotophilus heathii', 
             'Scotophilus kuhlii',
-            'Tadarida teniotis'
-            )
-
+            'Tadarida teniotis',
+            'Vespertilio murinus'
+)
 # BatModels2 %>% filter(Sp %in% verify) %>% View()
 
 #################################
@@ -139,9 +181,9 @@ BatWeb %>% select(c(Sp,
 BatWeb %>% mutate(Source = '') -> BatWeb
 
 BatWeb$Source[BatWeb$Sp %in% c('Hipposideros pomona',
-                        'Scotophilus kuhlii', 
-                        'Myotis pequinius', 
-                        'Myotis horsfieldii')] <- 'https://www.biorxiv.org/content/10.1101/2020.05.31.116061v1'
+                               'Scotophilus kuhlii', 
+                               'Myotis pequinius', 
+                               'Myotis horsfieldii')] <- 'https://www.biorxiv.org/content/10.1101/2020.05.31.116061v1'
 
 BatWeb$Source[BatWeb$Sp %in% c('Pteropus lylei')] <- 'https://virologyj.biomedcentral.com/articles/10.1186/s12985-018-0950-6'
 
@@ -171,7 +213,52 @@ BatWeb$Source[BatWeb$Sp %in% c('Pipistrellus coromandra')] <- 'https://www.scien
 
 BatWeb$Source[BatWeb$Sp %in% c('Hipposideros lekaguli')] <- 'https://www.sciencedirect.com/science/article/abs/pii/S1567134816305135'
 
+# BatWeb$Source[BatWeb$Sp %in% c('Megaerops kusnotei')] <- 'https://link.springer.com/content/pdf/10.1007/s12250-016-3727-3.pdf'
+
+# BatWeb$Source[BatWeb$Sp %in% c('Hipposideros lekaguli')] <- 'https://www.sciencedirect.com/science/article/abs/pii/S1567134816305135'
+
 BatWeb$Source[BatWeb$Sp %in% c('Megaerops kusnotei')] <- 'https://link.springer.com/content/pdf/10.1007/s12250-016-3727-3.pdf'
+
+BatWeb$Source[BatWeb$Sp %in% c('Hypsugo pulveratus')] <- 'GenBank: MN312842, MN312848, MN312849, MN312852, MN312853, MN312854'
+
+BatWeb$Source[BatWeb$Sp %in% c('Myotis punicus')] <- 'GenBank: MN823619'
+
+BatWeb$Source[BatWeb$Sp %in% c('Rhinolophus shameli')] <- 'https://www.biorxiv.org/content/10.1101/2021.01.26.428212v1'
+
+BatWeb$Source[BatWeb$Sp %in% c('Rhinolophus acuminatus')] <- 'https://www.nature.com/articles/s41467-021-21240-1'
+
+BatWeb$Source[BatWeb$Sp %in% c('Nycteris gambiensis',
+                               'Pteronotus personatus')] <- 'https://journals.plos.org/plospathogens/article/authors?id=10.1371/journal.ppat.1008758'
+
+BatWeb$Source[BatWeb$Sp %in% c('Rhinolophus stheno',
+                               'Rhinolophus malayanus')] <- 'https://www.biorxiv.org/content/10.1101/2021.03.08.434390v1?rss=1'
+
+BatWeb$Source[BatWeb$Sp %in% c('Vespertilio murinus')] <- 'https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0252534'
+
+BatWeb$Source[BatWeb$Sp %in% c('Myonycteris torquata', 
+                               'Hipposideros fuliginosus', 
+                               'Hipposideros cervinus',
+                               'Chaerephon pumilus', 
+                               'Glauconycteris variegata', 
+                               'Neoromicia somalicus',
+                               'Megaerops ecaudatus',
+                               'Epomops buettikoferi',
+                               'Acerodon celebensis',
+                               'Pteropus conspicillatus')] <- 'USAID PREDICT data - PREDICT_PCR_Tests.csv - June 28, 2021'
+
+BatWeb$Source[BatWeb$Sp %in% c('Emballonura alecto')] <- 'https://link.springer.com/article/10.1007/s00705-012-1410-z'
+
+BatWeb$Source[BatWeb$Sp %in% c('Miniopterus magnater')] <- 'https://www.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.82203-0#tab2'
+
+BatWeb$Source[BatWeb$Sp %in% c('Neoromicia zuluensis')] <- 'https://wwwnc.cdc.gov/eid/article/19/10/13-0946_article'
+
+BatWeb$Source[BatWeb$Sp %in% c('Nycteris thebaica',
+                               'Rousettus madagascariensis')] <- 'https://www.nature.com/articles/s41598-020-63799-7'
+
+BatWeb$Source[BatWeb$Sp %in% c('Pipistrellus tenuis')] <- 'https://journals.asm.org/doi/10.1128/JVI.00116-18?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed'
+
+BatWeb$Source[BatWeb$Sp %in% c('Rhinolophus rufus')] <- 'https://link.springer.com/article/10.1007/s00705-012-1410-z'
+
 
 # Compile and print out 
 
