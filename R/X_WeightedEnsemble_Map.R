@@ -50,6 +50,8 @@ unsampled.0[unsampled.0=='Neoromicia brunneus'] <- 'Neoromicia brunnea'
 unsampled.0[unsampled.0=='Hypsugo imbricatus'] <- 'Pipistrellus imbricatus'
 unsampled.0[unsampled.0=='Eptesicus matroka'] <- 'Neoromicia matroka'
 unsampled.0[unsampled.0=='Hypsugo crassulus'] <- 'Pipistrellus crassulus'
+unsampled.0[unsampled.0=='Hypsugo anchietae'] <- 'Pipistrellus anchietae'
+unsampled.0[unsampled.0=='Nyctophilus timoriensis'] <- 'Nyctophilus corbeni'
 
 
 ###
