@@ -493,7 +493,7 @@ ggarrange(f4A,f4C,f4B,f4D,common.legend = T,
           font.label=list(size=11.5,face="plain"),
           heights=c(1,0.65),
           label.x=-0.01,
-          label.y=0.98)
+          la0el.y=0.98)
 dev.off()
 
 ## as PDF

@@ -268,6 +268,7 @@ BatModels_IS %>%
   
 }
 
+## main plot
 ((TilePlot_IS + coord_fixed() + ggtitle("In-sample")|
     TilePlot_OS + coord_fixed() + ggtitle("Out-of-sample")) +
     
@@ -276,6 +277,16 @@ BatModels_IS %>%
   ggsave("Figures/TilePlots.jpeg", units = "mm", 
          height = 120, width = 200)
 
+## pdf
+((TilePlot_IS + coord_fixed() + ggtitle("In-sample")|
+    TilePlot_OS + coord_fixed() + ggtitle("Out-of-sample")) +
+    
+    plot_layout(guides = "collect")) +
+  plot_annotation(tag_levels = "A") +
+  ggsave("Figures/TilePlots.pdf", units = "mm", 
+         height = 120, width = 200)
+
+## extra
   (BumpPlot_IS + 
      theme(legend.position = "bottom") +
      guides(colour = guide_legend(direction = "vertical",
