@@ -146,7 +146,12 @@ names(batnew2)[2:ncol(batnew2)]=paste(names(batnew2)[2:ncol(batnew2)],"_V3",sep=
 bats=merge(batold,batnew,by="Sp")
 bats=merge(bats,batnew2,by="Sp")
 
-## tally
+## tally known
+table(bats$Betacov_V1)
+table(bats$Betacov_V2)
+table(bats$Betacov_V3)
+
+## tally suspect
 table(bats$category2_V1)
 table(bats$category2_V2)
 table(bats$category2_V3)
